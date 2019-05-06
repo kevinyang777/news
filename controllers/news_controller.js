@@ -74,7 +74,7 @@ export default class HotelController extends BaseController {
           res,
           responseBuilder
             .setSuccess(false)
-            .setMessage("invalid payload for creating new news")
+            .setMessage("invalid payload for updating news")
             .build()
         );
       }

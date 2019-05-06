@@ -77,4 +77,89 @@ export default class UserController extends BaseController {
       );
     }
   }
+
+  async update(req, res) {
+    const { id } = req.params;
+    let responseBuilder = new ResponseBuilder();
+    const { role } = req.body;
+    try {
+      if (!id || !role) {
+        this.sendInvalidPayloadResponse(
+          res,
+          responseBuilder
+            .setSuccess(false)
+            .setMessage("invalid payload for updating user")
+            .build()
+        );
+      }
+      const payload = {
+        role
+      };
+      const news = await this.service.update(
+        payload,
+        { id },
+        {
+          returning: true,
+          plain: true
+        }
+      );
+      this.sendSuccessResponse(
+        res,
+        responseBuilder
+          .setData(news)
+          .setMessage("user data updated")
+          .build()
+      );
+    } catch (error) {
+      this.sendBadRequestResponse(
+        res,
+        responseBuilder
+          .setSuccess(false)
+          .setMessage(error.toString())
+          .build()
+      );
+    }
+  }
+
+  async delete(req, res) {
+    const { id } = req.params;
+    let responseBuilder = new ResponseBuilder();
+    try {
+      if (!id) {
+        this.sendInvalidPayloadResponse(
+          res,
+          responseBuilder
+            .setSuccess(false)
+            .setMessage("invalid payload for deleting user")
+            .build()
+        );
+      }
+      const payload = {
+        deletedAt:new Date()
+      };
+      const news = await this.service.update(
+        payload,
+        { id },
+        {
+          returning: true,
+          plain: true
+        }
+      );
+      this.sendSuccessResponse(
+        res,
+        responseBuilder
+          .setData(news)
+          .setMessage("user deleted")
+          .build()
+      );
+    } catch (error) {
+      this.sendBadRequestResponse(
+        res,
+        responseBuilder
+          .setSuccess(false)
+          .setMessage(error.toString())
+          .build()
+      );
+    }
+  }
 }

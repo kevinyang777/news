@@ -1,16 +1,16 @@
 import express from 'express';
 import { newsController } from '../controllers';
 
-import AuthUser from '../utils/auth_user';
+// import AuthUser from '../utils/auth_user';
 import AuthAdmin from '../utils/auth_admin';
 
 const router = express.Router();
 
-router.get('/', AuthUser, (req, res) => {
+router.get('/', (req, res) => {
   newsController.get(req, res);
 });
 
-router.get('/:id', AuthUser, (req, res) => {
+router.get('/:id', (req, res) => {
   newsController.find(req, res);
 });
 

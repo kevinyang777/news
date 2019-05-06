@@ -170,13 +170,22 @@ import {
       }
       try {
         const user = await this.userService.findOne({ email });
-  
         if (!user) {
           this.sendNotFoundResponse(
             res,
             responseBuilder
               .setSuccess(false)
               .setMessage('has not been registered yet.')
+              .build()
+          );
+          return;
+        }
+        if (user.deletedAt!==null) {
+          this.sendNotFoundResponse(
+            res,
+            responseBuilder
+              .setSuccess(false)
+              .setMessage('your account have been disabled')
               .build()
           );
           return;
