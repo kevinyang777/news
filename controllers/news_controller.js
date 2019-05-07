@@ -2,7 +2,7 @@ import { NewsService } from "../services/index";
 import ResponseBuilder from "../utils/response_builder";
 import BaseController from "./base_controller";
 
-export default class HotelController extends BaseController {
+export default class NewsController extends BaseController {
   /**
    * User controller class
    */
@@ -162,7 +162,7 @@ export default class HotelController extends BaseController {
         res,
         responseBuilder
           .setData(result)
-          .setMessage('hotel fetched successfully')
+          .setMessage('news fetched successfully')
           .build()
       );
       return;

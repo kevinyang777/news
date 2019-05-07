@@ -1,9 +1,9 @@
 import BaseService from './base_service';
 import models from '../models';
 
-export default class HotelService extends BaseService {
+export default class NewsService extends BaseService {
   /**
-   * Hotel specific service class
+   * News specific service class
    */
 
   constructor() {
