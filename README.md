@@ -6,4 +6,7 @@
 6. Run the migration with "npx sequelize db:migrate"
 7. Run npm run dev
 
+made with express framework
+run in localhost 127.0.0.1 port 3000
+
 Postman collection json = fakedetik.postman_collection.json
