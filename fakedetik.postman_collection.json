@@ -118,7 +118,7 @@
 				"header": [
 					{
 						"key": "authorization",
-						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1NTI0NiwiZXhwIjoxNTU3MTU4ODQ2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.GptWc1pZfKw5-ENgcauxTVx3V3znDPu2LmvDwvR16sc",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE2MjcyNCwiZXhwIjoxNTU3MTY2MzI0LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.1A3q4uRqelvhH8Ddhq5T4tVLuzARbZWvDLvjTzQqWf0",
 						"type": "text"
 					}
 				],
@@ -410,6 +410,41 @@
 					]
 				},
 				"description": "edit user role"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/users/4",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE2MjcyNCwiZXhwIjoxNTU3MTY2MzI0LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.1A3q4uRqelvhH8Ddhq5T4tVLuzARbZWvDLvjTzQqWf0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/4",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"4"
+					]
+				},
+				"description": "delete user"
 			},
 			"response": []
 		}
