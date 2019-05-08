@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "d8848caa-273b-4e00-89de-dc433f321b54",
+		"name": "fakedetik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:3000/api/v1/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"kevinsa\",\n\t\"email\":\"user@user.com\",\n\t\"password\":\"password\",\n\t\"role\":\"user\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/auth/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				},
+				"description": "registration"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/auth/getToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"user@user.com\",\n\t\"password\":\"password\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/auth/getToken",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"getToken"
+					]
+				},
+				"description": "login token"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/auth/refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"refresh_token\":\"b4n6hirkp1wkjds5gpwicjiifxbxxtph\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/auth/refreshToken",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"refreshToken"
+					]
+				},
+				"description": "refreshing token"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/users/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1NTI0NiwiZXhwIjoxNTU3MTU4ODQ2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.GptWc1pZfKw5-ENgcauxTVx3V3znDPu2LmvDwvR16sc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				},
+				"description": "user list"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/users/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1NTI0NiwiZXhwIjoxNTU3MTU4ODQ2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.GptWc1pZfKw5-ENgcauxTVx3V3znDPu2LmvDwvR16sc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					]
+				},
+				"description": "single user fetch"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/news/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAdXNlci5jb20iLCJyb2xlIjoidXNlciIsInVzZXJuYW1lIjoia2V2aW5zYSIsImlkIjo3LCJpYXQiOjE1NTcxNjI1NjcsImV4cCI6MTU1NzE2NjE2NywiaXNzIjoiZmFrZWRldGlrLWJhY2tlbmQiLCJzdWIiOiJmYWtlZGV0aWstYWNjZXNzLXRva2VuIiwianRpIjoiZmFrZWRldGlrIn0.YzDrf-eLL7G7EjnLJ8tZawFtCvJBINhlvqEcY2gFbRQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/news/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"2"
+					],
+					"query": [
+						{
+							"key": "authorization",
+							"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1NTI0NiwiZXhwIjoxNTU3MTU4ODQ2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.GptWc1pZfKw5-ENgcauxTVx3V3znDPu2LmvDwvR16sc",
+							"disabled": true
+						}
+					]
+				},
+				"description": "get all news"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/news/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1OTEwNiwiZXhwIjoxNTU3MTYyNzA2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.cC-Lexmw1FHvKveYI304cL9it3tAJrGuNrqK6B8vp5E",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"newsHeader\":\"besos111331111k\",\n\t\"newsContent\":\"lissssbur\",\n\t\"status\":\"published\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/news/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						""
+					]
+				},
+				"description": "create news"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/news/1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1OTEwNiwiZXhwIjoxNTU3MTYyNzA2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.cC-Lexmw1FHvKveYI304cL9it3tAJrGuNrqK6B8vp5E",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"newsHeader\":\"besoskssss\",\n\t\"newsContent\":\"libur\",\n\t\"status\":\"published\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/news/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"2"
+					]
+				},
+				"description": "update news"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/news/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1OTEwNiwiZXhwIjoxNTU3MTYyNzA2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.cC-Lexmw1FHvKveYI304cL9it3tAJrGuNrqK6B8vp5E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/news/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"1"
+					]
+				},
+				"description": "delete news"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/news/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE1OTEwNiwiZXhwIjoxNTU3MTYyNzA2LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.cC-Lexmw1FHvKveYI304cL9it3tAJrGuNrqK6B8vp5E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/news/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"2"
+					]
+				},
+				"description": "find news"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/api/v1/users/4",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtldmluQGtldmluLmNvbSIsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoia2V2aW5hIiwiaWQiOjQsImlhdCI6MTU1NzE2MjcyNCwiZXhwIjoxNTU3MTY2MzI0LCJpc3MiOiJmYWtlZGV0aWstYmFja2VuZCIsInN1YiI6ImZha2VkZXRpay1hY2Nlc3MtdG9rZW4iLCJqdGkiOiJmYWtlZGV0aWsifQ.1A3q4uRqelvhH8Ddhq5T4tVLuzARbZWvDLvjTzQqWf0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role\":\"admin\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/v1/users/4",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"4"
+					]
+				},
+				"description": "edit user role"
+			},
+			"response": []
+		}
+	]
+}

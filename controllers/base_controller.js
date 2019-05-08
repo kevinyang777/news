@@ -10,6 +10,10 @@ export default class BaseController {
     sendCreatedResponse(res, response_body = {}) {
       res.status(201).json(response_body);
     }
+
+    sendRefuseResponse(res, response_body = {}) {
+      res.status(403).json(response_body);
+    }
   
     sendNotFoundResponse(res, response_body = {}) {
       res.status(404).json(response_body);

@@ -26,7 +26,7 @@ export default class NewsController extends BaseController {
     );
     return;
   }
-
+  //The best way to save these kind of file is in a third party storage in json format though, the load is not all going to database
   async create(req, res) {
     let responseBuilder = new ResponseBuilder();
     const { newsHeader, newsContent, status } = req.body;
@@ -143,6 +143,7 @@ export default class NewsController extends BaseController {
       );
     }
   }
+
   async find(req, res){
     const { id } = req.params;
     let responseBuilder = new ResponseBuilder();

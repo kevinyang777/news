@@ -181,7 +181,7 @@ import {
           return;
         }
         if (user.deletedAt!==null) {
-          this.sendNotFoundResponse(
+          this.sendRefuseResponse(
             res,
             responseBuilder
               .setSuccess(false)
