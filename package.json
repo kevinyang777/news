@@ -11,11 +11,15 @@
     "dev": "nodemon --exec npm run babel-node -- ./app.js",
     "lint-test": "./node_modules/.bin/eslint .",
     "build": "babel ./ -d dist --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./test,./seeders",
-    "serve": "nodemon dist/app.js",
+    "serve": "npm run babel-node -- ./app.js",
+    "start":"npm run babel-node -- ./app.js",
     "clean": "rm -rf ./dist && npm run build"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "sequelize-cli": "^5.4.0"
+  },
   "dependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
@@ -34,7 +38,6 @@
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
     "sequelize": ">=5.3.0",
-    "sequelize-cli": "^5.4.0",
     "babel-cli": "^6.0.0",
     "nodemon":"^1.19.0"
   }
